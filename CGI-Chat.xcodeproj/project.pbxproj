@@ -12,6 +12,9 @@
 		03FEA5C01DCC8A59008E4F8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03FEA5BE1DCC8A59008E4F8F /* Main.storyboard */; };
 		03FEA5C21DCC8A59008E4F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03FEA5C11DCC8A59008E4F8F /* Assets.xcassets */; };
 		03FEA5C51DCC8A59008E4F8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03FEA5C31DCC8A59008E4F8F /* LaunchScreen.storyboard */; };
+		03FEA5E31DCC9A2D008E4F8F /* AVCamManualPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FEA5DE1DCC9A2D008E4F8F /* AVCamManualPreviewView.m */; };
+		03FEA5E41DCC9A2D008E4F8F /* AVCamManualCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FEA5E01DCC9A2D008E4F8F /* AVCamManualCameraViewController.m */; };
+		03FEA5E51DCC9A2D008E4F8F /* AVCamManualPhotoCaptureDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FEA5E21DCC9A2D008E4F8F /* AVCamManualPhotoCaptureDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,13 @@
 		03FEA5C11DCC8A59008E4F8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03FEA5C41DCC8A59008E4F8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03FEA5C61DCC8A59008E4F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03FEA5DC1DCC9A2C008E4F8F /* CGI-Chat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CGI-Chat-Bridging-Header.h"; sourceTree = "<group>"; };
+		03FEA5DD1DCC9A2D008E4F8F /* AVCamManualPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamManualPreviewView.h; sourceTree = "<group>"; };
+		03FEA5DE1DCC9A2D008E4F8F /* AVCamManualPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamManualPreviewView.m; sourceTree = "<group>"; };
+		03FEA5DF1DCC9A2D008E4F8F /* AVCamManualCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamManualCameraViewController.h; sourceTree = "<group>"; };
+		03FEA5E01DCC9A2D008E4F8F /* AVCamManualCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamManualCameraViewController.m; sourceTree = "<group>"; };
+		03FEA5E11DCC9A2D008E4F8F /* AVCamManualPhotoCaptureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamManualPhotoCaptureDelegate.h; sourceTree = "<group>"; };
+		03FEA5E21DCC9A2D008E4F8F /* AVCamManualPhotoCaptureDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamManualPhotoCaptureDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +87,8 @@
 			children = (
 				03FEA5BE1DCC8A59008E4F8F /* Main.storyboard */,
 				03FEA5C31DCC8A59008E4F8F /* LaunchScreen.storyboard */,
+				03FEA5DD1DCC9A2D008E4F8F /* AVCamManualPreviewView.h */,
+				03FEA5DE1DCC9A2D008E4F8F /* AVCamManualPreviewView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -85,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				03FEA5BC1DCC8A59008E4F8F /* CameraVC.swift */,
+				03FEA5DF1DCC9A2D008E4F8F /* AVCamManualCameraViewController.h */,
+				03FEA5E01DCC9A2D008E4F8F /* AVCamManualCameraViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -93,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				03FEA5BA1DCC8A59008E4F8F /* AppDelegate.swift */,
+				03FEA5E11DCC9A2D008E4F8F /* AVCamManualPhotoCaptureDelegate.h */,
+				03FEA5E21DCC9A2D008E4F8F /* AVCamManualPhotoCaptureDelegate.m */,
 			);
 			name = Delegate;
 			sourceTree = "<group>";
@@ -100,6 +116,7 @@
 		03FEA5D01DCC8B2A008E4F8F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				03FEA5DC1DCC9A2C008E4F8F /* CGI-Chat-Bridging-Header.h */,
 				03FEA5C61DCC8A59008E4F8F /* Info.plist */,
 			);
 			name = Resource;
@@ -145,6 +162,7 @@
 					03FEA5B61DCC8A59008E4F8F = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 458GZWZ2EK;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -185,7 +203,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03FEA5E51DCC9A2D008E4F8F /* AVCamManualPhotoCaptureDelegate.m in Sources */,
+				03FEA5E31DCC9A2D008E4F8F /* AVCamManualPreviewView.m in Sources */,
 				03FEA5BD1DCC8A59008E4F8F /* CameraVC.swift in Sources */,
+				03FEA5E41DCC9A2D008E4F8F /* AVCamManualCameraViewController.m in Sources */,
 				03FEA5BB1DCC8A59008E4F8F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,11 +330,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 458GZWZ2EK;
 				INFOPLIST_FILE = "CGI-Chat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.CgiDeveopments.CGI-Chat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CGI-Chat/CGI-Chat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -322,11 +346,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 458GZWZ2EK;
 				INFOPLIST_FILE = "CGI-Chat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.CgiDeveopments.CGI-Chat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CGI-Chat/CGI-Chat-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
