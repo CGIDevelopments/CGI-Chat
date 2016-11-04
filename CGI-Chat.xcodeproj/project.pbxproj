@@ -92,6 +92,7 @@
 		03FEA5CF1DCC8B17008E4F8F /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
+				03FEA5BA1DCC8A59008E4F8F /* AppDelegate.swift */,
 			);
 			name = Delegate;
 			sourceTree = "<group>";
@@ -107,7 +108,6 @@
 		03FEA5D11DCC8B5A008E4F8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				03FEA5BA1DCC8A59008E4F8F /* AppDelegate.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -350,6 +350,7 @@
 				03FEA5CB1DCC8A59008E4F8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
