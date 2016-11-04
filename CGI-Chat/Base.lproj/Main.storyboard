@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11755"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,13 +26,33 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMc-cz-HQB" userLabel="TakeSnapButton">
+                                <rect key="frame" x="168" y="619" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="ita-FP-RzO"/>
+                                    <constraint firstAttribute="height" constant="40" id="ra3-ID-k1f"/>
+                                </constraints>
+                                <state key="normal" image="createsnap_btn"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcX-rE-ulq" userLabel="CameraSwitchButton">
+                                <rect key="frame" x="311" y="28" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FKi-7e-dEN"/>
+                                    <constraint firstAttribute="width" constant="40" id="SCn-yE-hYt"/>
+                                </constraints>
+                                <state key="normal" image="camera_icon_snap"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5b8-Uq-lah" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="66d-Fs-Q9f"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5b8-Uq-lah" secondAttribute="bottom" id="RzP-IN-leo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RcX-rE-ulq" secondAttribute="trailing" constant="8" id="Smu-Ls-XkZ"/>
                             <constraint firstAttribute="trailing" secondItem="5b8-Uq-lah" secondAttribute="trailing" id="crN-Ap-xwm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BMc-cz-HQB" secondAttribute="bottom" constant="8" id="hQo-4B-pF9"/>
+                            <constraint firstItem="RcX-rE-ulq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="hg2-sF-0zo"/>
                             <constraint firstItem="5b8-Uq-lah" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="k3Y-nO-lHQ"/>
+                            <constraint firstItem="BMc-cz-HQB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uOS-cA-MsR"/>
                         </constraints>
                     </view>
                     <connections>
@@ -43,4 +64,8 @@
             <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera_icon_snap" width="29" height="24"/>
+        <image name="createsnap_btn" width="30" height="30"/>
+    </resources>
 </document>
