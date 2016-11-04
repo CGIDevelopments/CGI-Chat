@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03FEA5BB1DCC8A59008E4F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FEA5BA1DCC8A59008E4F8F /* AppDelegate.swift */; };
-		03FEA5BD1DCC8A59008E4F8F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FEA5BC1DCC8A59008E4F8F /* ViewController.swift */; };
+		03FEA5BD1DCC8A59008E4F8F /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FEA5BC1DCC8A59008E4F8F /* CameraVC.swift */; };
 		03FEA5C01DCC8A59008E4F8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03FEA5BE1DCC8A59008E4F8F /* Main.storyboard */; };
 		03FEA5C21DCC8A59008E4F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03FEA5C11DCC8A59008E4F8F /* Assets.xcassets */; };
 		03FEA5C51DCC8A59008E4F8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03FEA5C31DCC8A59008E4F8F /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		03FEA5B71DCC8A59008E4F8F /* CGI-Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CGI-Chat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03FEA5BA1DCC8A59008E4F8F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03FEA5BC1DCC8A59008E4F8F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		03FEA5BC1DCC8A59008E4F8F /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		03FEA5BF1DCC8A59008E4F8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03FEA5C11DCC8A59008E4F8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03FEA5C41DCC8A59008E4F8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +54,62 @@
 		03FEA5B91DCC8A59008E4F8F /* CGI-Chat */ = {
 			isa = PBXGroup;
 			children = (
-				03FEA5BA1DCC8A59008E4F8F /* AppDelegate.swift */,
-				03FEA5BC1DCC8A59008E4F8F /* ViewController.swift */,
-				03FEA5BE1DCC8A59008E4F8F /* Main.storyboard */,
-				03FEA5C11DCC8A59008E4F8F /* Assets.xcassets */,
-				03FEA5C31DCC8A59008E4F8F /* LaunchScreen.storyboard */,
-				03FEA5C61DCC8A59008E4F8F /* Info.plist */,
+				03FEA5D11DCC8B5A008E4F8F /* Model */,
+				03FEA5D01DCC8B2A008E4F8F /* Resource */,
+				03FEA5CF1DCC8B17008E4F8F /* Delegate */,
+				03FEA5CE1DCC8B0D008E4F8F /* Controller */,
+				03FEA5CD1DCC8B05008E4F8F /* View */,
+				03FEA5CC1DCC8AF5008E4F8F /* Assets */,
 			);
 			path = "CGI-Chat";
+			sourceTree = "<group>";
+		};
+		03FEA5CC1DCC8AF5008E4F8F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				03FEA5C11DCC8A59008E4F8F /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		03FEA5CD1DCC8B05008E4F8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03FEA5BE1DCC8A59008E4F8F /* Main.storyboard */,
+				03FEA5C31DCC8A59008E4F8F /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		03FEA5CE1DCC8B0D008E4F8F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				03FEA5BC1DCC8A59008E4F8F /* CameraVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		03FEA5CF1DCC8B17008E4F8F /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		03FEA5D01DCC8B2A008E4F8F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				03FEA5C61DCC8A59008E4F8F /* Info.plist */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		03FEA5D11DCC8B5A008E4F8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03FEA5BA1DCC8A59008E4F8F /* AppDelegate.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03FEA5BD1DCC8A59008E4F8F /* ViewController.swift in Sources */,
+				03FEA5BD1DCC8A59008E4F8F /* CameraVC.swift in Sources */,
 				03FEA5BB1DCC8A59008E4F8F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
