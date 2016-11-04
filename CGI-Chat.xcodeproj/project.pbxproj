@@ -12,6 +12,9 @@
 		03FEA5C01DCC8A59008E4F8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03FEA5BE1DCC8A59008E4F8F /* Main.storyboard */; };
 		03FEA5C21DCC8A59008E4F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03FEA5C11DCC8A59008E4F8F /* Assets.xcassets */; };
 		03FEA5C51DCC8A59008E4F8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03FEA5C31DCC8A59008E4F8F /* LaunchScreen.storyboard */; };
+		03FEA5D91DCC8DBD008E4F8F /* AVCamPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FEA5D41DCC8DBD008E4F8F /* AVCamPreviewView.m */; };
+		03FEA5DA1DCC8DBD008E4F8F /* AVCamCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FEA5D61DCC8DBD008E4F8F /* AVCamCameraViewController.m */; };
+		03FEA5DB1DCC8DBD008E4F8F /* AVCamPhotoCaptureDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FEA5D81DCC8DBD008E4F8F /* AVCamPhotoCaptureDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,13 @@
 		03FEA5C11DCC8A59008E4F8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03FEA5C41DCC8A59008E4F8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03FEA5C61DCC8A59008E4F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03FEA5D21DCC8DBD008E4F8F /* CGI-Chat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CGI-Chat-Bridging-Header.h"; sourceTree = "<group>"; };
+		03FEA5D31DCC8DBD008E4F8F /* AVCamPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamPreviewView.h; sourceTree = "<group>"; };
+		03FEA5D41DCC8DBD008E4F8F /* AVCamPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamPreviewView.m; sourceTree = "<group>"; };
+		03FEA5D51DCC8DBD008E4F8F /* AVCamCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamCameraViewController.h; sourceTree = "<group>"; };
+		03FEA5D61DCC8DBD008E4F8F /* AVCamCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamCameraViewController.m; sourceTree = "<group>"; };
+		03FEA5D71DCC8DBD008E4F8F /* AVCamPhotoCaptureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCamPhotoCaptureDelegate.h; sourceTree = "<group>"; };
+		03FEA5D81DCC8DBD008E4F8F /* AVCamPhotoCaptureDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCamPhotoCaptureDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,7 @@
 				03FEA5CE1DCC8B0D008E4F8F /* Controller */,
 				03FEA5CD1DCC8B05008E4F8F /* View */,
 				03FEA5CC1DCC8AF5008E4F8F /* Assets */,
+				03FEA5D21DCC8DBD008E4F8F /* CGI-Chat-Bridging-Header.h */,
 			);
 			path = "CGI-Chat";
 			sourceTree = "<group>";
@@ -77,6 +88,8 @@
 			children = (
 				03FEA5BE1DCC8A59008E4F8F /* Main.storyboard */,
 				03FEA5C31DCC8A59008E4F8F /* LaunchScreen.storyboard */,
+				03FEA5D31DCC8DBD008E4F8F /* AVCamPreviewView.h */,
+				03FEA5D41DCC8DBD008E4F8F /* AVCamPreviewView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -85,6 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				03FEA5BC1DCC8A59008E4F8F /* CameraVC.swift */,
+				03FEA5D51DCC8DBD008E4F8F /* AVCamCameraViewController.h */,
+				03FEA5D61DCC8DBD008E4F8F /* AVCamCameraViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -92,6 +107,9 @@
 		03FEA5CF1DCC8B17008E4F8F /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
+				03FEA5BA1DCC8A59008E4F8F /* AppDelegate.swift */,
+				03FEA5D71DCC8DBD008E4F8F /* AVCamPhotoCaptureDelegate.h */,
+				03FEA5D81DCC8DBD008E4F8F /* AVCamPhotoCaptureDelegate.m */,
 			);
 			name = Delegate;
 			sourceTree = "<group>";
@@ -107,7 +125,6 @@
 		03FEA5D11DCC8B5A008E4F8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				03FEA5BA1DCC8A59008E4F8F /* AppDelegate.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -145,6 +162,7 @@
 					03FEA5B61DCC8A59008E4F8F = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 458GZWZ2EK;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -185,8 +203,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03FEA5DB1DCC8DBD008E4F8F /* AVCamPhotoCaptureDelegate.m in Sources */,
 				03FEA5BD1DCC8A59008E4F8F /* CameraVC.swift in Sources */,
 				03FEA5BB1DCC8A59008E4F8F /* AppDelegate.swift in Sources */,
+				03FEA5DA1DCC8DBD008E4F8F /* AVCamCameraViewController.m in Sources */,
+				03FEA5D91DCC8DBD008E4F8F /* AVCamPreviewView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,11 +330,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 458GZWZ2EK;
 				INFOPLIST_FILE = "CGI-Chat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.CgiDeveopments.CGI-Chat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CGI-Chat/CGI-Chat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -322,11 +346,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 458GZWZ2EK;
 				INFOPLIST_FILE = "CGI-Chat/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.CgiDeveopments.CGI-Chat";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CGI-Chat/CGI-Chat-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
