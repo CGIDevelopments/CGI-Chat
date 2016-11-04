@@ -34,6 +34,9 @@
                             <constraint firstItem="5b8-Uq-lah" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="k3Y-nO-lHQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="previewView" destination="5b8-Uq-lah" id="Zex-8l-voe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

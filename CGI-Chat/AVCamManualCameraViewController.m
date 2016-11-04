@@ -37,7 +37,7 @@ typedef NS_ENUM( NSInteger, AVCamManualCaptureMode ) {
 
 @interface AVCamManualCameraViewController () <AVCaptureFileOutputRecordingDelegate>
 
-@property (nonatomic, weak) IBOutlet AVCamManualPreviewView *previewView;
+
 @property (nonatomic, weak) IBOutlet UISegmentedControl *captureModeControl;
 @property (nonatomic, weak) IBOutlet UILabel *cameraUnavailableLabel;
 @property (nonatomic, weak) IBOutlet UIButton *resumeButton;
@@ -139,7 +139,7 @@ static const float kExposureMinimumDuration = 1.0/1000; // Limit exposure durati
 	self.videoDeviceDiscoverySession = [AVCaptureDeviceDiscoverySession discoverySessionWithDeviceTypes:deviceTypes mediaType:AVMediaTypeVideo position:AVCaptureDevicePositionUnspecified];
 
 	// Set up the preview view
-	self.previewView.session = self.session;
+	self._previewView.session = self.session;
 	
 	// Communicate with the session and other session objects on this queue
 	self.sessionQueue = dispatch_queue_create( "session queue", DISPATCH_QUEUE_SERIAL );
@@ -252,7 +252,7 @@ static const float kExposureMinimumDuration = 1.0/1000; // Limit exposure durati
 	UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
 	
 	if ( UIDeviceOrientationIsPortrait( deviceOrientation ) || UIDeviceOrientationIsLandscape( deviceOrientation ) ) {
-		AVCaptureVideoPreviewLayer *previewLayer = (AVCaptureVideoPreviewLayer *)self.previewView.layer;
+		AVCaptureVideoPreviewLayer *previewLayer = (AVCaptureVideoPreviewLayer *)self._previewView.layer;
 		previewLayer.connection.videoOrientation = (AVCaptureVideoOrientation)deviceOrientation;
 	}
 }
@@ -455,7 +455,7 @@ static const float kExposureMinimumDuration = 1.0/1000; // Limit exposure durati
 				initialVideoOrientation = (AVCaptureVideoOrientation)statusBarOrientation;
 			}
 			
-			AVCaptureVideoPreviewLayer *previewLayer = (AVCaptureVideoPreviewLayer *)self.previewView.layer;
+			AVCaptureVideoPreviewLayer *previewLayer = (AVCaptureVideoPreviewLayer *)self._previewView.layer;
 			previewLayer.connection.videoOrientation = initialVideoOrientation;
 		} );
 	}
@@ -765,7 +765,7 @@ static const float kExposureMinimumDuration = 1.0/1000; // Limit exposure durati
 
 - (IBAction)focusAndExposeTap:(UIGestureRecognizer *)gestureRecognizer
 {
-	CGPoint devicePoint = [(AVCaptureVideoPreviewLayer *)self.previewView.layer captureDevicePointOfInterestForPoint:[gestureRecognizer locationInView:[gestureRecognizer view]]];
+	CGPoint devicePoint = [(AVCaptureVideoPreviewLayer *)self._previewView.layer captureDevicePointOfInterestForPoint:[gestureRecognizer locationInView:[gestureRecognizer view]]];
 	[self focusWithMode:self.videoDevice.focusMode exposeWithMode:self.videoDevice.exposureMode atDevicePoint:devicePoint monitorSubjectAreaChange:YES];
 }
 
@@ -918,7 +918,7 @@ static const float kExposureMinimumDuration = 1.0/1000; // Limit exposure durati
 {
 	// Retrieve the video preview layer's video orientation on the main queue before entering the session queue
 	// We do this to ensure UI elements are accessed on the main thread and session configuration is done on the session queue
-	AVCaptureVideoPreviewLayer *previewLayer = (AVCaptureVideoPreviewLayer *)self.previewView.layer;
+	AVCaptureVideoPreviewLayer *previewLayer = (AVCaptureVideoPreviewLayer *)self._previewView.layer;
 	AVCaptureVideoOrientation videoPreviewLayerVideoOrientation = previewLayer.connection.videoOrientation;
 	
 	AVCapturePhotoSettings *settings = [self currentPhotoSettings];
@@ -932,9 +932,9 @@ static const float kExposureMinimumDuration = 1.0/1000; // Limit exposure durati
 		AVCamManualPhotoCaptureDelegate *photoCaptureDelegate = [[AVCamManualPhotoCaptureDelegate alloc] initWithRequestedPhotoSettings:settings willCapturePhotoAnimation:^{
 			// Perform a shutter animation.
 			dispatch_async( dispatch_get_main_queue(), ^{
-				self.previewView.layer.opacity = 0.0;
+				self._previewView.layer.opacity = 0.0;
 				[UIView animateWithDuration:0.25 animations:^{
-					self.previewView.layer.opacity = 1.0;
+					self._previewView.layer.opacity = 1.0;
 				}];
 			} );
 		} completed:^( AVCamManualPhotoCaptureDelegate *photoCaptureDelegate ) {
@@ -965,7 +965,7 @@ static const float kExposureMinimumDuration = 1.0/1000; // Limit exposure durati
 	
 	// Retrieve the video preview layer's video orientation on the main queue before entering the session queue. We do this to ensure UI
 	// elements are accessed on the main thread and session configuration is done on the session queue.
-	AVCaptureVideoPreviewLayer *previewLayer = (AVCaptureVideoPreviewLayer *)self.previewView.layer;
+	AVCaptureVideoPreviewLayer *previewLayer = (AVCaptureVideoPreviewLayer *)self._previewView.layer;
 	AVCaptureVideoOrientation previewLayerVideoOrientation = previewLayer.connection.videoOrientation;
 	dispatch_async( self.sessionQueue, ^{
 		if ( ! self.movieFileOutput.isRecording ) {
